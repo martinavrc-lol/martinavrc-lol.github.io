@@ -1,0 +1,95 @@
+<svg width="246" height="175" viewBox="394 45 176 170" xmlns="http://www.w3.org/2000/svg">
+<style>.p{shape-rendering:crispEdges;}</style>
+
+<!-- Folder grande de fondo -->
+<rect class="p" x="400" y="50" width="52" height="7" fill="#f5ddd9"/>
+<rect class="p" x="400" y="57" width="60" height="7" fill="#e8c8c4"/>
+<rect class="p" x="394" y="64" width="175" height="130" fill="#610605"/>
+<rect class="p" x="394" y="64" width="175" height="7" fill="#a01010"/>
+<rect class="p" x="394" y="64" width="7" height="130" fill="#a01010"/>
+<rect class="p" x="562" y="64" width="7" height="130" fill="#2a0202"/>
+<rect class="p" x="394" y="187" width="175" height="7" fill="#2a0202"/>
+<rect class="p" x="401" y="71" width="161" height="116" fill="#7a0808"/>
+<rect class="p" x="401" y="71" width="7" height="7" fill="#f0c8c4"/>
+<rect class="p" x="415" y="71" width="7" height="7" fill="#f0c8c4"/>
+<rect class="p" x="429" y="71" width="7" height="7" fill="#f0c8c4"/>
+<rect class="p" x="443" y="71" width="7" height="7" fill="#f0c8c4"/>
+<rect class="p" x="457" y="71" width="7" height="7" fill="#f0c8c4"/>
+<rect class="p" x="471" y="71" width="7" height="7" fill="#f0c8c4"/>
+<rect class="p" x="485" y="71" width="7" height="7" fill="#f0c8c4"/>
+<rect class="p" x="499" y="71" width="7" height="7" fill="#f0c8c4"/>
+<rect class="p" x="408" y="78" width="7" height="7" fill="#f0c8c4"/>
+<rect class="p" x="422" y="78" width="7" height="7" fill="#f0c8c4"/>
+<rect class="p" x="436" y="78" width="7" height="7" fill="#f0c8c4"/>
+<rect class="p" x="450" y="78" width="7" height="7" fill="#f0c8c4"/>
+<rect class="p" x="464" y="78" width="7" height="7" fill="#f0c8c4"/>
+<rect class="p" x="401" y="85" width="7" height="7" fill="#f0c8c4"/>
+<rect class="p" x="415" y="85" width="7" height="7" fill="#f0c8c4"/>
+<rect class="p" x="429" y="85" width="7" height="7" fill="#f0c8c4"/>
+<rect class="p" x="408" y="92" width="7" height="7" fill="#f0c8c4"/>
+<rect class="p" x="422" y="92" width="7" height="7" fill="#f0c8c4"/>
+<rect class="p" x="401" y="99" width="7" height="7" fill="#f0c8c4"/>
+
+<!-- Ventana pequeña -->
+<rect class="p" x="430" y="108" width="140" height="110" fill="#e8d0d0"/>
+<rect class="p" x="430" y="108" width="140" height="4" fill="#f5e8e8"/>
+<rect class="p" x="430" y="108" width="4" height="110" fill="#f5e8e8"/>
+<rect class="p" x="566" y="108" width="4" height="110" fill="#6a3030"/>
+<rect class="p" x="430" y="214" width="140" height="4" fill="#6a3030"/>
+<rect class="p" x="434" y="112" width="132" height="12" fill="#610605"/>
+<rect class="p" x="437" y="114" width="7" height="7" fill="#e8a000"/>
+<rect class="p" x="551" y="114" width="7" height="7" fill="#f5ddd9"/>
+<rect class="p" x="560" y="114" width="7" height="7" fill="#f5ddd9"/>
+<rect class="p" x="434" y="124" width="132" height="86" fill="#fdf0ee"/>
+
+<!-- Grid iconos fila 1 -->
+<rect class="p" x="447" y="132" width="16" height="12" fill="#610605"/>
+<rect class="p" x="447" y="132" width="16" height="4" fill="#a01010"/>
+<rect class="p" x="447" y="132" width="4" height="12" fill="#a01010"/>
+<rect class="p" x="459" y="132" width="4" height="12" fill="#2a0202"/>
+<rect class="p" x="447" y="140" width="16" height="4" fill="#2a0202"/>
+<rect class="p" x="452" y="144" width="6" height="4" fill="#2a0202"/>
+<rect class="p" x="490" y="132" width="16" height="12" fill="#8c4444"/>
+<rect class="p" x="490" y="132" width="16" height="4" fill="#d9a0a0"/>
+<rect class="p" x="490" y="132" width="4" height="12" fill="#d9a0a0"/>
+<rect class="p" x="502" y="132" width="4" height="12" fill="#4a2020"/>
+<rect class="p" x="490" y="140" width="16" height="4" fill="#4a2020"/>
+<rect class="p" x="495" y="144" width="6" height="4" fill="#4a2020"/>
+<rect class="p" x="533" y="132" width="16" height="12" fill="#f0c8c4"/>
+<rect class="p" x="533" y="132" width="16" height="4" fill="#ffffff"/>
+<rect class="p" x="533" y="132" width="4" height="12" fill="#ffffff"/>
+<rect class="p" x="545" y="132" width="4" height="12" fill="#c08888"/>
+<rect class="p" x="533" y="140" width="16" height="4" fill="#c08888"/>
+<rect class="p" x="538" y="144" width="6" height="4" fill="#c08888"/>
+<rect class="p" x="444" y="149" width="22" height="3" fill="#c09090"/>
+<rect class="p" x="487" y="149" width="22" height="3" fill="#c09090"/>
+<rect class="p" x="530" y="149" width="22" height="3" fill="#c09090"/>
+
+<!-- Grid iconos fila 2 -->
+<rect class="p" x="447" y="162" width="16" height="12" fill="#e8b8b8"/>
+<rect class="p" x="447" y="162" width="16" height="4" fill="#fdf0ee"/>
+<rect class="p" x="447" y="162" width="4" height="12" fill="#fdf0ee"/>
+<rect class="p" x="459" y="162" width="4" height="12" fill="#a07070"/>
+<rect class="p" x="447" y="170" width="16" height="4" fill="#a07070"/>
+<rect class="p" x="452" y="174" width="6" height="4" fill="#a07070"/>
+<rect class="p" x="490" y="162" width="16" height="12" fill="#610605"/>
+<rect class="p" x="490" y="162" width="16" height="4" fill="#a01010"/>
+<rect class="p" x="490" y="162" width="4" height="12" fill="#a01010"/>
+<rect class="p" x="502" y="162" width="4" height="12" fill="#2a0202"/>
+<rect class="p" x="490" y="170" width="16" height="4" fill="#2a0202"/>
+<rect class="p" x="495" y="174" width="6" height="4" fill="#2a0202"/>
+<rect class="p" x="533" y="162" width="16" height="12" fill="#8c4444"/>
+<rect class="p" x="533" y="162" width="16" height="4" fill="#d9a0a0"/>
+<rect class="p" x="533" y="162" width="4" height="12" fill="#d9a0a0"/>
+<rect class="p" x="545" y="162" width="4" height="12" fill="#4a2020"/>
+<rect class="p" x="533" y="170" width="16" height="4" fill="#4a2020"/>
+<rect class="p" x="538" y="174" width="6" height="4" fill="#4a2020"/>
+<rect class="p" x="444" y="178" width="22" height="3" fill="#c09090"/>
+<rect class="p" x="487" y="178" width="22" height="3" fill="#c09090"/>
+<rect class="p" x="530" y="178" width="22" height="3" fill="#c09090"/>
+
+<!-- Scrollbar -->
+<rect class="p" x="562" y="124" width="4" height="86" fill="#d0b8b8"/>
+<rect class="p" x="562" y="124" width="4" height="10" fill="#f5ddd9"/>
+<rect class="p" x="562" y="200" width="4" height="10" fill="#f5ddd9"/>
+</svg>

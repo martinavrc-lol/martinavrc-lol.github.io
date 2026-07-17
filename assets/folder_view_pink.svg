@@ -1,0 +1,107 @@
+<svg width="246" height="175" viewBox="394 45 176 170" xmlns="http://www.w3.org/2000/svg">
+<style>.p{shape-rendering:crispEdges;}</style>
+
+<!-- Folder grande de fondo — rose-primary como base -->
+<rect class="p" x="400" y="50" width="52" height="7" fill="rgb(240, 200, 196)"/>
+<rect class="p" x="400" y="57" width="60" height="7" fill="rgb(211, 150, 140)"/>
+<rect class="p" x="394" y="64" width="175" height="130" fill="rgb(211, 150, 140)"/>
+<rect class="p" x="394" y="64" width="175" height="7" fill="rgb(240, 200, 196)"/>
+<rect class="p" x="394" y="64" width="7" height="130" fill="rgb(240, 200, 196)"/>
+<rect class="p" x="562" y="64" width="7" height="130" fill="rgb(62, 4, 4)"/>
+<rect class="p" x="394" y="187" width="175" height="7" fill="rgb(62, 4, 4)"/>
+<rect class="p" x="401" y="71" width="161" height="116" fill="rgb(176, 112, 112)"/>
+
+<!-- Puntitos decorativos — peach-2 sobre rose -->
+<rect class="p" x="401" y="71" width="7" height="7" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="415" y="71" width="7" height="7" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="429" y="71" width="7" height="7" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="443" y="71" width="7" height="7" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="457" y="71" width="7" height="7" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="471" y="71" width="7" height="7" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="485" y="71" width="7" height="7" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="499" y="71" width="7" height="7" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="408" y="78" width="7" height="7" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="422" y="78" width="7" height="7" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="436" y="78" width="7" height="7" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="450" y="78" width="7" height="7" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="464" y="78" width="7" height="7" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="401" y="85" width="7" height="7" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="415" y="85" width="7" height="7" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="429" y="85" width="7" height="7" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="408" y="92" width="7" height="7" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="422" y="92" width="7" height="7" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="401" y="99" width="7" height="7" fill="rgb(253, 240, 238)"/>
+
+<!-- Ventana pequeña -->
+<rect class="p" x="430" y="108" width="140" height="110" fill="rgb(240, 200, 196)"/>
+<rect class="p" x="430" y="108" width="140" height="4" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="430" y="108" width="4" height="110" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="566" y="108" width="4" height="110" fill="rgb(62, 4, 4)"/>
+<rect class="p" x="430" y="214" width="140" height="4" fill="rgb(62, 4, 4)"/>
+<!-- Barra título en rose-dark -->
+<rect class="p" x="434" y="112" width="132" height="12" fill="rgb(176, 112, 112)"/>
+<!-- Botón amarillo -->
+<rect class="p" x="437" y="114" width="7" height="7" fill="rgb(232, 160, 0)"/>
+<!-- Botones control en peach -->
+<rect class="p" x="551" y="114" width="7" height="7" fill="rgb(245, 221, 217)"/>
+<rect class="p" x="560" y="114" width="7" height="7" fill="rgb(245, 221, 217)"/>
+<!-- Área contenido -->
+<rect class="p" x="434" y="124" width="132" height="86" fill="rgb(255, 255, 255)"/>
+
+<!-- Grid iconos fila 1 -->
+<rect class="p" x="447" y="132" width="16" height="12" fill="rgb(176, 112, 112)"/>
+<rect class="p" x="447" y="132" width="16" height="4" fill="rgb(245, 221, 217)"/>
+<rect class="p" x="447" y="132" width="4" height="12" fill="rgb(245, 221, 217)"/>
+<rect class="p" x="459" y="132" width="4" height="12" fill="rgb(62, 4, 4)"/>
+<rect class="p" x="447" y="140" width="16" height="4" fill="rgb(62, 4, 4)"/>
+<rect class="p" x="452" y="144" width="6" height="4" fill="rgb(62, 4, 4)"/>
+
+<rect class="p" x="490" y="132" width="16" height="12" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="490" y="132" width="16" height="4" fill="rgb(255, 248, 247)"/>
+<rect class="p" x="490" y="132" width="4" height="12" fill="rgb(255, 248, 247)"/>
+<rect class="p" x="502" y="132" width="4" height="12" fill="rgb(176, 112, 112)"/>
+<rect class="p" x="490" y="140" width="16" height="4" fill="rgb(176, 112, 112)"/>
+<rect class="p" x="495" y="144" width="6" height="4" fill="rgb(176, 112, 112)"/>
+
+<rect class="p" x="533" y="132" width="16" height="12" fill="rgb(176, 112, 112)"/>
+<rect class="p" x="533" y="132" width="16" height="4" fill="rgb(240, 200, 196)"/>
+<rect class="p" x="533" y="132" width="4" height="12" fill="rgb(240, 200, 196)"/>
+<rect class="p" x="545" y="132" width="4" height="12" fill="rgb(62, 4, 4)"/>
+<rect class="p" x="533" y="140" width="16" height="4" fill="rgb(62, 4, 4)"/>
+<rect class="p" x="538" y="144" width="6" height="4" fill="rgb(62, 4, 4)"/>
+
+<rect class="p" x="444" y="149" width="22" height="3" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="487" y="149" width="22" height="3" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="530" y="149" width="22" height="3" fill="rgb(253, 240, 238)"/>
+
+<!-- Grid iconos fila 2 -->
+<rect class="p" x="447" y="162" width="16" height="12" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="447" y="162" width="16" height="4" fill="rgb(255, 248, 247)"/>
+<rect class="p" x="447" y="162" width="4" height="12" fill="rgb(255, 248, 247)"/>
+<rect class="p" x="459" y="162" width="4" height="12" fill="rgb(176, 112, 112)"/>
+<rect class="p" x="447" y="170" width="16" height="4" fill="rgb(176, 112, 112)"/>
+<rect class="p" x="452" y="174" width="6" height="4" fill="rgb(176, 112, 112)"/>
+
+<rect class="p" x="490" y="162" width="16" height="12" fill="rgb(176, 112, 112)"/>
+<rect class="p" x="490" y="162" width="16" height="4" fill="rgb(245, 221, 217)"/>
+<rect class="p" x="490" y="162" width="4" height="12" fill="rgb(245, 221, 217)"/>
+<rect class="p" x="502" y="162" width="4" height="12" fill="rgb(62, 4, 4)"/>
+<rect class="p" x="490" y="170" width="16" height="4" fill="rgb(62, 4, 4)"/>
+<rect class="p" x="495" y="174" width="6" height="4" fill="rgb(62, 4, 4)"/>
+
+<rect class="p" x="533" y="162" width="16" height="12" fill="rgb(240, 200, 196)"/>
+<rect class="p" x="533" y="162" width="16" height="4" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="533" y="162" width="4" height="12" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="545" y="162" width="4" height="12" fill="rgb(62, 4, 4)"/>
+<rect class="p" x="533" y="170" width="16" height="4" fill="rgb(62, 4, 4)"/>
+<rect class="p" x="538" y="174" width="6" height="4" fill="rgb(62, 4, 4)"/>
+
+<rect class="p" x="444" y="178" width="22" height="3" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="487" y="178" width="22" height="3" fill="rgb(253, 240, 238)"/>
+<rect class="p" x="530" y="178" width="22" height="3" fill="rgb(253, 240, 238)"/>
+
+<!-- Scrollbar -->
+<rect class="p" x="562" y="124" width="4" height="86" fill="rgb(176, 112, 112)"/>
+<rect class="p" x="562" y="124" width="4" height="10" fill="rgb(245, 221, 217)"/>
+<rect class="p" x="562" y="200" width="4" height="10" fill="rgb(245, 221, 217)"/>
+</svg>

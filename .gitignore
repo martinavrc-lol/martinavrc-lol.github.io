@@ -1,0 +1,13 @@
+# ===== Archivos basura del sistema operativo =====
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+
+# ===== Configuración de editores / herramientas =====
+.vscode/
+
+# ===== Accesos directos de Windows =====
+*.lnk

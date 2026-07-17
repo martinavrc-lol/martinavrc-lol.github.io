@@ -1,0 +1,1398 @@
+:root {
+    scroll-behavior: smooth;
+    font-size: 100%;
+
+    /* --- colores --- */
+    --burgundy-primary: rgb(97, 6, 5);      /* bordo principal: textos y fondo de la seccion proyectos */
+    --burgundy-deep: rgb(62, 4, 4);         /* bordo oscuro: botones, bordes y barras */
+    --rose-primary: rgb(211, 150, 140);     /* rosa: acentos y bordes punteados */
+    --rose-dark: rgb(176, 112, 112);        /* rosa oscuro: bordes punteados y separadores */
+    --rose-text: rgb(157, 89, 89);          /* rosa oscuro para textos: cumple contraste AA */
+    --peach-1: rgb(245, 221, 217);          /* durazno claro: fondo del header */
+    --peach-2: rgb(240, 200, 196);          /* durazno medio */
+    --peach-3: rgb(253, 240, 238);          /* durazno muy claro: fondos de tarjetas */
+    --cream: rgb(255, 248, 247);            /* crema: color base */
+    --border-deck: rgb(255, 255, 255);      /* blanco: fondo de las cartas del mazo */
+    --deck-shadow: rgba(50, 2, 2, .18);     /* sombra de las cartas del mazo */
+
+    /* --- tipografias --- */
+    --hero-font: 'Pearl Jean';                              /* display / hero (auto-hospedada) */
+    --h1-primary: 'Fraunces', Georgia, serif;               /* titulos h1 */
+    --text-primary: Georgia, serif;                         /* texto de parrafos */
+    --mono-primary: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;   /* estilo terminal / mono */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+li,
+ul {
+    list-style: none;
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+}
+
+h1 {
+    font-family: var(--hero-font);
+}
+
+
+h2,
+h4,
+h3,
+h5,
+h6,
+strong,
+em,
+mark,
+pre,
+code {
+    font: inherit;
+}
+
+mark {
+    background-color: transparent;
+}
+
+picture,
+img,
+video,
+iframe {
+    display: block;
+    max-width: 100%;
+    width: 100%;
+    height: initial;
+}
+
+svg {
+    display: block;
+    width: initial;
+    height: initial;
+    fill: currentColor;
+}
+
+form,
+input,
+select,
+option,
+textarea,
+label,
+fieldset,
+legend,
+button {
+    display: block;
+    font: inherit;
+    background-color: initial;
+}
+
+fieldset {
+    border: none;
+}
+
+button,
+label {
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: 'Pearl Jean';
+    src: url('../fonts/pearl-jean.woff2') format('woff2'),
+        url('../fonts/pearl-jean.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    /*background-color: var(--peach-1);*/
+    font-family: var(--text-primary);
+    font-size: 1rem;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* estrellita rosa como cursor en todo el sitio (fallback a auto) */
+    cursor: url('../assets/rosa-cursor.svg') 16 16, auto;
+}
+
+/* la estrella tambien sobre links y botones (pisa el pointer del reset) */
+a,
+button,
+label {
+    cursor: url('../assets/rosa-cursor.svg') 16 16, pointer;
+}
+
+/* en los campos del formulario, cursor de texto normal */
+input,
+textarea {
+    cursor: text;
+}
+
+
+/* ==================== HEADER ==================== */
+
+.Header {
+    width: 70%;
+    margin: 2rem auto 0;
+    padding: 1.3rem 4rem 1.3rem 4rem;
+    background-color: var(--peach-1);
+    border: 2px dashed var(--burgundy-primary);
+    border-radius: 3rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.Header-img {
+    width: 2.5rem;
+}
+
+.Header-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.Header-li {
+    color: var(--burgundy-primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    font-family: var(--mono-primary);
+}
+
+.Header-li a {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.Header-li a:hover {
+    opacity: 0.7;
+}
+
+.Header-li a:active {
+    transform: scale(0.95);
+}
+
+.Header-burger {
+    display: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.Header-burger:hover {
+    opacity: 0.7;
+}
+
+.Header-burger:active {
+    transform: scale(0.95);
+}
+
+/* la X de cerrar: oculta en desktop */
+.Header-close-li {
+    display: none;
+}
+
+.Header-close {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.Header-close:hover {
+    opacity: 0.7;
+}
+
+.Header-close:active {
+    transform: scale(0.95);
+}
+
+/* con el menu abierto, la página de atrás no scrollea */
+body.menuAbierto {
+    overflow: hidden;
+}
+
+/* --------------- RESPONSIVE HEADER --------------- */
+
+/* tablet */
+@media (max-width: 1024px) {
+    .Header {
+        width: 90%;
+        padding: 1.2rem 2rem;
+    }
+}
+
+/* menu hamburguesa: aparece en tablets angostos y móvil */
+@media (max-width: 768px) {
+    .Header-burger {
+        display: block;
+        color: var(--burgundy-deep);
+    }
+
+    .Header-li {
+        font-size: 1.3rem;
+        color: var(--peach-1);
+    }
+
+    .Header-ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 10;
+        background-color: var(--burgundy-primary);
+
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+
+        transform: translateX(100%);
+        transition: transform 0.4s ease;
+    }
+
+    .Header-ul.isOpen {
+        transform: translateX(0);
+    }
+
+    /* la X de cerrar, arriba a la derecha del panel */
+    .Header-close-li {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 2rem;
+        margin: 0;
+    }
+
+    .Header-close {
+        color: var(--peach-1);
+        line-height: 1;
+    }
+}
+
+/* movil */
+@media (max-width: 600px) {
+    .Header {
+        padding: 1rem 1.2rem;
+        margin-top: 1.2rem;
+    }
+}
+
+/* =================== HERO LANDING =================== */
+
+.Hero-landing {
+    width: 100%;
+    height: 85vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Hero-h1 {
+    width: 100%;
+    color: var(--burgundy-primary);
+    font-size: clamp(1.7rem, 8vw, 5rem);
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 9;
+
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 2s ease, transform 0.8s ease;
+}
+
+.Hero-h1-span {
+    display: block;
+}
+
+.Hero-h1.isVisible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Hero-star {
+    position: absolute;
+    width: 4rem;
+    pointer-events: none;
+}
+
+/* --------------- RESPONSIVE HERO --------------- */
+
+/* movil */
+@media (max-width: 600px){ 
+    .Hero-landing {
+        height: 80vh;
+    }
+
+}
+
+/* =================== PROJECTS =================== */
+
+.Projects {
+    width: 100%;
+    background-color: var(--burgundy-primary);
+}
+
+/* =================== PROJECTS HEADER =================== */
+
+.Projects-header {
+    width: 100%;
+    padding: 1.3rem 4rem 1.3rem 4rem;
+    border-bottom: 2px dashed var(--rose-primary);
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Projects-h2 {
+    padding: 1rem 0 1rem 0;
+    color: var(--rose-primary);
+    font-family: var(--hero-font);
+    font-size: 2rem;
+}
+
+.Projects-imagen {
+    width: 2rem;
+}
+
+/* =================== PROJECTS FOLDERS =================== */
+
+.Projects-little {
+    width: 90%;
+    padding: 3rem 3rem 0 3rem;
+    margin: auto;
+    color: var(--peach-1);
+    font-family: var(--mono-primary);
+}
+
+.Span {
+    color: var(--rose-primary);
+}
+
+.Projects-wrap {
+    width: 90%;
+    min-height: 80vh;
+    padding: 3rem;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: stretch;
+    gap: 2rem;
+}
+
+.Projects-folder {
+    width: 100%;
+    height: fit-content;
+
+    border: 3px dashed var(--rose-dark);
+    border-radius: 1rem;
+    background-color: var(--peach-3);
+
+    display: flex;
+    flex-flow: column;
+
+    transition: transform 0.4s ease;
+
+}
+
+.Projects-folder:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 5px rgba(12, 12, 12, 0.25);
+}
+
+/* barra de arriba */
+
+.Projects-up {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--peach-1);
+    border-radius: 1rem 1rem 0 0;
+    border-bottom: 3px dashed var(--rose-dark);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Projects-name {
+    color: var(--burgundy-deep);
+    font-weight: 600;
+    font-family: var(--mono-primary);
+}
+
+.Projects-code {
+    color: var(--burgundy-deep);
+    font-weight: 600;
+}
+
+/* contenido con folders y data */
+.Projects-info {
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: start;
+    gap: .8rem;
+}
+
+.Projects-svg {
+    width: 110px;
+}
+
+.Projects-title {
+    color: var(--rose-text);
+}
+
+.Projects-p {
+    color: var(--burgundy-deep);
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.Projects-a {
+    color: var(--rose-text);
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.Projects-a:hover {
+    opacity: 0.7;
+}
+
+.Projects-a:active {
+    transform: scale(0.95);
+}
+
+/* -------------- RESPONSIVE FOLDERS LANDING -------------- */
+
+/* tablet */
+@media (max-width: 1024px) {
+
+    .Projects-header {
+        padding: 1.2rem 2rem;
+    }
+
+    .Projects-wrap {
+        width: 95%;
+        padding: 2rem;
+        flex-flow: row wrap;
+    }
+
+    /* dos folders por fila */
+    .Projects-folder {
+        width: calc(50% - 1rem);
+    }
+}
+
+/* movil */
+@media (max-width: 600px) {
+
+    .Projects-header {
+        padding: 1rem 1.2rem;
+    }
+
+    .Projects-h2 {
+        font-size: 1.6rem;
+    }
+
+    .Projects-little{
+        font-size: .8rem;
+        padding: 1.7rem 1rem 0 .6rem;
+    }
+
+    .Projects-wrap {
+        width: 100%;
+        padding: 1.5rem 1.2rem;
+        flex-flow: column;
+        gap: 1.5rem;
+    }
+
+    /* un folder por fila */
+    .Projects-folder {
+        width: 100%;
+    }
+}
+
+/* =================== PROJECTS INFORMATION =================== */
+
+.Projects-section {
+    width: 90%;
+    margin: 5vh auto;
+}
+
+.Projects-down {
+    margin: 3rem 0 0;
+    padding: 1rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 8rem;
+}
+
+.Projects-information {
+    width: 60%;
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.Projects-head {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.Projects-h1 {
+    align-self: center;
+    margin: 0 0 2rem;
+    font-size: clamp(3rem, 7vw, 4rem);
+    color: var(--burgundy-primary);
+    font-family: var(--h1-primary);
+}
+
+.Projects-p {
+    margin: 0 0 2rem;
+    color: var(--burgundy-primary);
+    font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+}
+
+.Projects-ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: .5rem;
+}
+
+.Projects-li {
+    width: fit-content;
+    padding: .5rem;
+    border: 1px dashed var(--rose-primary);
+    border-radius: 2rem;
+    color: var(--burgundy-primary);
+    font-weight: 500;
+}
+
+.Divider {
+    width: 100%;
+    margin: 1rem;
+    border-bottom: 1px dashed var(--rose-dark);
+}
+
+.Projects-panel {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.Projects-barup {
+    width: 100%;
+}
+
+.Projects-sub {
+    width: 100%;
+    font-size: clamp(1.15rem, 3vw, 1.4rem);
+    color: var(--burgundy-deep);
+}
+
+.Projects-content {
+    color: var(--burgundy-primary);
+    font-size: clamp(1rem, 2.4vw, 1.1rem);
+}
+
+.Projects-links {
+    width: fit-content;
+    padding: .6rem 2rem;
+    margin: 3rem auto;
+    border: 1px dashed var(--rose-primary);
+    border-radius: 2rem;
+    background-color: var(--burgundy-deep);
+    font-size: 1.1rem;
+    color: var(--peach-3);
+    font-family: var(--mono-primary);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.Projects-links:hover {
+    opacity: 0.7;
+}
+
+.Projects-links:active {
+    transform: scale(0.95);
+}
+
+/*  mazo de cartas  */
+
+.Projects-mockups {
+    position: relative;
+    top: 6rem;
+    align-self: flex-start;
+    flex: 0 0 auto;
+    width: 40%;
+    height: 420px;
+    user-select: none;
+}
+
+/* la carta: contenedor blanco, todas del mismo tamaño */
+.Deck-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    padding: 14px;
+    background-color: var(--border-deck);
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px var(--deck-shadow);
+    transform: translate(-50%, -50%);
+}
+
+/* el picture ocupa toda la carta para que la imagen entre bien */
+.Deck-card picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* la imagen va adentro, entera y centrada */
+.Projects-img {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    object-fit: contain;
+    border-radius: .5rem;
+}
+
+/* rotaciones para verlas desordenadas */
+.Deck-card:nth-child(1) {
+    transform: translate(-50%, -50%) rotate(-6deg);
+}
+
+.Deck-card:nth-child(2) {
+    transform: translate(-50%, -50%) rotate(4deg);
+}
+
+.Deck-card:nth-child(3) {
+    transform: translate(-50%, -50%) rotate(-3deg);
+}
+
+.Deck-card:nth-child(4) {
+    transform: translate(-50%, -50%) rotate(6deg);
+}
+
+.Deck-card:nth-child(5) {
+    transform: translate(-50%, -50%) rotate(-5deg);
+}
+
+.Deck-card:nth-child(6) {
+    transform: translate(-50%, -50%) rotate(2deg);
+}
+
+.Deck-card:nth-child(7) {
+    transform: translate(-50%, -50%) rotate(-2deg);
+}
+
+/* las flechas para moverse por el mazo */
+.Deck-nav {
+    position: absolute;
+    bottom: -3.8rem;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    font-family: var(--mono-primary);
+    color: var(--burgundy-primary);
+}
+
+.Deck-count {
+    min-width: 3rem;
+    text-align: center;
+}
+
+.Deck-prev,
+.Deck-next {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: var(--burgundy-primary);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.Deck-prev:hover,
+.Deck-next:hover {
+    opacity: 0.7;
+}
+
+.Deck-prev:active,
+.Deck-next:active {
+    transform: scale(0.95);
+}
+
+
+/* --------------- RESPONSIVE PAGINAS PROYECTOS --------------- */
+
+/* tablet*/
+@media (max-width: 1024px) {
+    .Projects-section {
+        width: 92%;
+    }
+
+    /* al apilarse, el texto vuelve a llenar todo el ancho */
+    .Projects-information {
+        width: 100%;
+    }
+
+    .Projects-down {
+        flex-flow: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .Projects-mockups {
+        position: relative;
+        top: 0;
+        width: 100%;
+        max-width: 420px;
+        margin: 1rem auto 6rem;
+    }
+
+    .Projects-links {
+        padding: .5rem 1.4rem;
+        margin: auto;
+        font-size: .95rem;
+    }
+}
+
+/* movil */
+@media (max-width: 600px) {
+    .Projects-section {
+        width: 94%;
+    }
+
+    .Projects-down {
+        margin-top: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .Projects-mockups {
+        width: min(300px, 82vw);
+        height: 340px;
+    }
+
+    /* flechas y contador mas chicos en movil */
+    .Deck-count,
+    .Deck-prev,
+    .Deck-next {
+        font-size: .85rem;
+    }
+
+    /* boton del link mas compacto */
+    .Projects-links {
+        padding: .5rem 1.4rem;
+        margin: auto;
+        font-size: .95rem;
+    }
+}
+
+
+/* =================== ABOUT ME =================== */
+
+.About {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.About-header {
+    width: 100%;
+    padding: 1.3rem 4rem 1.3rem 4rem;
+    border-bottom: 2px dashed var(--burgundy-deep);
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.About-h2 {
+    padding: 1rem 0 1rem 0;
+    color: var(--burgundy-deep);
+    font-family: var(--hero-font);
+    font-size: 2rem;
+}
+
+.About-imagen {
+    width: 2rem;
+}
+
+.About-little {
+    width: 90%;
+    padding: 3rem 3rem 0 3rem;
+    margin: auto;
+    color: var(--burgundy-deep);
+    font-family: var(--mono-primary);
+    font-weight: 700;
+}
+
+.Span-little {
+    color: var(--rose-text);
+}
+
+.About-wrap {
+    width: 90%;
+    height: 100%;
+    padding: 3rem;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.About-img {
+    display: flex;
+    flex-flow: column;
+    gap: 1rem;
+}
+
+.About-myimg {
+    border-radius: 1rem;
+}
+
+.Img-span {
+    font-family: var(--mono-primary);
+    color: var(--burgundy-primary);
+    font-size: .9rem;
+}
+
+.About-info {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.About-mini {
+    color: var(--burgundy-deep);
+    font-size: 1.2rem;
+}
+
+.About-h3 {
+    font-family: var(--h1-primary);
+    color: var(--burgundy-deep);
+    font-size: 3rem;
+}
+
+.About-p {
+    color: var(--burgundy-primary);
+    font-size: 1.2rem;
+    margin: 0 0 16px;
+}
+
+.About-links {
+    width: fit-content;
+    padding: .4rem 1.5rem;
+    margin: .8rem 0 0;
+    border: 1px dashed var(--rose-primary);
+    border-radius: 2rem;
+    background-color: var(--burgundy-deep);
+    font-size: .9rem;
+    color: var(--peach-3);
+    font-family: var(--mono-primary);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.About-links:hover {
+    opacity: 0.7;
+}
+
+.About-links:active {
+    transform: scale(0.95);
+}
+
+.About-hr {
+    width: 90%;
+    margin: auto;
+    border: 1px dashed var(--rose-dark);
+
+}
+
+.About-skills {
+    width: 90%;
+    height: 100%;
+    padding: 3rem;
+    margin: auto;
+}
+
+.Skills-h3 {
+    margin: 0 0 1rem;
+}
+
+.About-wrapped {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.About-skill {
+    width: 100%;
+    margin: 0 0 2rem;
+}
+
+.About-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.About-name,
+.About-pct {
+    color: var(--burgundy-primary);
+    font-size: 1.2rem;
+}
+
+.About-bar {
+    width: 100%;
+    height: 12px;
+    border: 1px dashed var(--rose-primary);
+    border-radius: 2rem;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.About-fill {
+    height: 100%;
+    background-color: var(--burgundy-deep);
+    border-radius: 2rem;
+}
+
+.About-also {
+    width: 100%;
+    margin: 16px 0 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+    gap: 1rem;
+}
+
+.About-span {
+    color: var(--rose-text);
+    font-family: var(--mono-primary);
+    font-weight: 600;
+
+}
+
+.About-ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-items: start;
+    gap: 1rem;
+}
+
+.About-li {
+    width: fit-content;
+    padding: .4rem 1.5rem;
+    margin: .8rem 0 0;
+    border: 1px dashed var(--burgundy-deep);
+    border-radius: 2rem;
+    font-size: .9rem;
+    color: var(--burgundy-deep);
+    font-family: var(--mono-primary);
+}
+
+
+/* ---------- RESPONSIVE ABOUT ME ---------- */
+
+/* tablet */
+
+@media (max-width: 1024px) {
+    .About-header {
+        padding: 1.2rem 2rem;
+    }
+
+    .About-little {
+        padding: 2rem 2rem 0;
+    }
+
+    /* la foto y el texto se apilan */
+    .About-wrap {
+        flex-flow: column;
+        align-items: center;
+        padding: 2rem;
+    }
+
+    /* la imagen va despues del texto al apilarse */
+    .About-img {
+        order: 2;
+    }
+
+    .About-myimg {
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .About-skills {
+        padding: 2rem;
+    }
+}
+
+/* movil */
+
+@media (max-width: 600px) {
+    .About-header {
+        padding: 1rem 1.2rem;
+    }
+
+    .About-h2 {
+        font-size: 1.6rem;
+    }
+
+    .About-little{
+        font-size: .8rem;
+        padding: 1.7rem 0 0 0;
+    }
+
+    .About-wrap {
+        width: 100%;
+        padding: 1.5rem 1.2rem;
+    }
+
+    .About-h3 {
+        font-size: 2.2rem;
+    }
+
+    .About-p {
+        font-size: 1rem;
+    }
+
+    .About-skills {
+        width: 100%;
+        padding: 1.5rem 1.2rem;
+    }
+}
+
+/* =================== CONTACT =================== */
+
+.Contact{
+    width: 90%;
+    min-height: 70vh;
+    margin: auto;
+    padding: 4rem;
+
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.Contact-titles{
+    width: 100%;
+    margin: 0 0 1rem;
+}
+.Contact-little{
+    color: var(--burgundy-deep);
+    font-family: var(--mono-primary);
+    font-weight: 700;
+}
+.Contact-h1{
+    align-self: center;
+    font-size: clamp(2.5rem, 7vw, 4rem);
+    color: var(--burgundy-primary);
+    font-family: var(--h1-primary);
+}
+.Contact-p{
+    margin: 0 0 1rem;
+    color: var(--burgundy-primary);
+    font-size: 1.1rem;
+}
+.Contact-wrap{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    align-items: start;
+    gap: 3rem;
+
+}
+.Contact-info{
+    width: 100%;
+}
+
+.Contact-span{
+    color: var(--rose-text);
+    font-family: var(--mono-primary);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0 0 .6rem;
+}
+
+.Contact-box{
+    margin: 0 0 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 2px dashed var(--burgundy-deep);
+    background-color: var(--peach-3);
+}
+
+.Contact-title{
+    font-size: 1.1rem;
+    font-family: var(--mono-primary);
+    font-weight: 700;
+    color: var(--burgundy-deep);
+
+}
+.Contact-links{
+    font-size: 1.1rem;
+    font-family: var(--mono-primary);
+    font-weight: 600;
+    color: var(--burgundy-deep);
+    cursor: pointer;
+    text-decoration: underline;
+}
+.Contact-formation{
+    width: 100%;
+}
+
+.Contact-form{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: start;
+    align-items: start;
+}
+.Form-label{
+    margin: 0 0 .3rem;
+    font-family: var(--mono-primary);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--burgundy-deep);
+}
+
+.Form-input{
+    width: 100%;
+    margin: 0 0 1rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 2px dashed var(--burgundy-deep);
+    font-family: var(--mono-primary);
+    font-size: 1.1rem;
+}
+
+/* el mensaje: mas alto y solo estirable en vertical */
+textarea.Form-input{
+    min-height: 8rem;
+    resize: vertical;
+}
+.Form-button {
+    width: fit-content;
+    padding: .6rem 2rem;
+    border: 1px dashed var(--rose-primary);
+    border-radius: 2rem;
+    background-color: var(--burgundy-deep);
+    font-size: 1.1rem;
+    color: var(--peach-3);
+    font-family: var(--mono-primary);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.Form-button:hover {
+    opacity: 0.7;
+}
+
+.Form-button:active {
+    transform: scale(0.95);
+}
+
+/* ---------- RESPONSIVE CONTACT ---------- */
+
+/* tablet */
+
+@media (max-width: 1024px) {
+
+    .Contact {
+        width: 100%;
+        padding: 3rem 2rem;
+    }
+
+
+    .Contact-wrap {
+        flex-flow: column;
+        align-items: stretch;
+        gap: 1.75rem;
+    }
+
+}
+
+/* movil */
+
+@media (max-width: 600px) {
+    .Contact {
+        width: 100%;
+        padding: 2rem 1.2rem;
+        margin: 0;
+        gap: 1rem;
+    }
+
+    .Contact-h1{
+        line-height: 2.5rem;
+    }
+    .Contact-little{
+        font-size: .8rem;
+        padding: 1rem 0 0 ;
+        margin: 0 0 1.2rem;
+    }
+   .Contact-wrap {
+        flex-flow: column;
+        align-items: stretch;
+        gap: 1.25rem;
+    }
+
+    /* en movil, la tipografia de contact baja un escalon */
+    .Contact-p,
+    .Contact-span,
+    .Contact-links,
+    .Contact-title,
+    .Form-label,
+    .Form-input,
+    .Form-button {
+        font-size: 1rem;
+    }
+}
+/* =================== FOOTER =================== */
+
+.Footer {
+    width: 100%;
+    padding: 1.3rem 4rem 1.3rem 4rem;
+    border-top: 2px dashed var(--burgundy-deep);
+    background-color: var(--peach-3);
+
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.Footer-img {
+    width: 2.5rem;
+}
+
+.Footer-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.Footer-button {
+    color: var(--burgundy-primary);
+}
+
+.Footer-span {
+    color: var(--rose-text);
+}
+
+.Footer-button a {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.Footer-button a:hover {
+    opacity: 0.7;
+}
+
+.Footer-button a:active {
+    transform: scale(0.95);
+}
+
+
+/* =================== BOTON VOLVER ARRIBA =================== */
+
+.ToTop {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 8;
+
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--peach-1);
+    background-color: var(--burgundy-primary);
+    border: 2px dashed var(--peach-1);
+    border-radius: 50%;
+
+    /* oculto por defecto, aparece con la clase isVisible */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1rem);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+.ToTop.isVisible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.ToTop:hover {
+    opacity: 0.85;
+}
+
+.ToTop:active {
+    transform: scale(0.9);
+}
+
+/* variante solo-movil: el boton se oculta en desktop/tablet */
+@media (min-width: 601px) {
+    .ToTop--mobile {
+        display: none;
+    }
+}
+
+/* movil: un poco mas chico y pegado a la esquina */
+@media (max-width: 600px) {
+    .ToTop {
+        bottom: 1.2rem;
+        right: 1.2rem;
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+}
